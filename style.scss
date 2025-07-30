@@ -54,6 +54,11 @@
                 letter-spacing: 3%;
                 width: 118px;
                 height: 24px;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
             }
 
         }
@@ -91,6 +96,48 @@
         align-items: center;
         margin-left: 24px;
         gap: 16px;
+    }
+
+    &__button3 {
+        position: relative;
+        display: inline-block;
+
+        &_open {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background: linear-gradient(180deg, #ddd, #622c91);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            z-index: 100;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                white-space: nowrap;
+
+                span {
+                    margin-right: 10px;
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    color: #622c91;
+                }
+            }
+        }
+
+        &:hover &_open {
+            display: flex;
+        }
     }
 
     &__button {
@@ -1550,6 +1597,7 @@ $font-heading: Inter, sans-serif;
                     padding-left: 16px;
                     background: #000;
                     border: 1.5px #fff solid;
+                    color: #fff;
                 }
 
                 button {
